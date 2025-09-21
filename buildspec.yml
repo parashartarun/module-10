@@ -16,7 +16,7 @@ phases:
       - mvn clean package
   post_build:
     commands:
-      - sam package --template-file samTemplate1.yml --s3-bucket $CODEBUILD_RESOLVED_SOURCE_S3_BUCKET --output-template-file packaged-template.yml
+      - sam package --template-file samTemplate1.yml --s3-bucket ec2-task4-1 --output-template-file packaged-template.yml
 
 artifacts:
   files:
