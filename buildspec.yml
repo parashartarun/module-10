@@ -6,6 +6,7 @@ phases:
       java: 17
       python: 3.11
     commands:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
       - pip install aws-sam-cli
   pre_build:
     commands:
